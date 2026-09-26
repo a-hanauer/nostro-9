@@ -10,6 +10,8 @@ Abra o `index.html` no navegador do celular ou do computador. Se estiver publica
 
 Todo dia há um **turno** com 3 missões. Cada missão concluída fica marcada como feita, e completar as 3 no mesmo dia fecha o turno e aumenta a **sequência de dias seguidos**. O **Fuja do Alien** é um desafio extra e opcional: fica marcado quando o jogador escapa, mas não é preciso para fechar o turno. Tudo pode ser repetido quantas vezes o jogador quiser.
 
+Cada missão tem sua **barra de progresso**, na tela inicial e dentro da missão. Se o jogador sair no meio, o jogo guarda exatamente onde ele parou (a tarefa, os números e o que já tinha feito nela), e o botão da missão passa a mostrar **Continuar**. No Fuja do Alien, dá para retomar a fuga com os acertos que já tinha.
+
 ## As missões
 
 | Missão | Conceito | Como funciona |
