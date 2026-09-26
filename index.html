@@ -61,6 +61,21 @@ h2{margin:0;font-family:var(--px);font-size:14px;line-height:1.7;font-weight:400
 .msg.good{color:var(--ok)}
 .note{margin:0;font-size:20px;color:var(--dim)}
 
+/* ---- a conta em destaque ---- */
+.conta{--b:var(--amber);--bg-c:#141128;display:flex;align-items:flex-start;justify-content:center;gap:10px;padding:18px 8px 14px}
+.conta .cn{display:flex;flex-direction:column;align-items:center;gap:10px;min-width:56px}
+.conta strong{font-family:var(--px);font-weight:400;font-size:32px;line-height:1;color:var(--text);text-shadow:3px 3px 0 #000}
+.conta small{font-size:18px;line-height:1;color:var(--dim);text-align:center}
+.conta .op{font-family:var(--px);font-size:26px;line-height:32px;color:var(--amber);text-shadow:3px 3px 0 #000}
+.conta .ans strong{min-width:68px;text-align:center;padding-bottom:6px;color:var(--amber);box-shadow:inset 0 -4px 0 0 var(--amber)}
+.conta.win{--b:var(--ok)}
+.conta.win .ans strong{color:var(--ok);box-shadow:inset 0 -4px 0 0 var(--ok)}
+.conta.bad .ans strong{color:var(--alert);box-shadow:inset 0 -4px 0 0 var(--alert)}
+.conta.pop{animation:pop .3s steps(3)}
+@keyframes pop{50%{transform:scale(1.06)}}
+.story{margin:0;font-size:20px;line-height:1.15;color:var(--dim)}
+.qn{font-family:var(--px);font-size:18px;color:var(--amber);white-space:nowrap}
+
 /* ---- menu ---- */
 .brand{display:flex;align-items:center;gap:16px}
 .logo{--b:var(--amber);position:relative;flex:none;width:60px;height:60px;display:grid;place-items:center;font-family:var(--px);font-size:16px;color:var(--amber);text-shadow:3px 3px 0 var(--amber-d);overflow:hidden;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:none}
@@ -153,17 +168,20 @@ h2{margin:0;font-family:var(--px);font-size:14px;line-height:1.7;font-weight:400
 .row{display:flex;gap:16px}
 .row>*{flex:1}
 
-/* ---- M3 ---- */
-.crews{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
-.crew-btn{background:none;padding:4px}
-.crew-btn:active{transform:translateY(3px)}
-.pods{display:flex;flex-wrap:wrap;gap:20px 16px}
-.pod{padding:10px 8px 8px;display:flex;flex-direction:column;align-items:center;gap:8px}
-.pod.full{--b:var(--ok)}
-.pod .seats{display:flex;gap:4px}
-.seat{width:26px;height:36px;display:grid;place-items:center;background:#0f0e24;box-shadow:inset 0 0 0 2px var(--edge)}
-.pod .tag{font-family:var(--px);font-size:7px;line-height:1;color:var(--dim)}
-.pod.full .tag{color:var(--ok)}
+/* ---- M3 hangar ---- */
+.stepper{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 14px}
+.stepper .sv{display:flex;flex-direction:column;align-items:center;gap:8px}
+.stepper .sv strong{font-family:var(--px);font-size:24px;font-weight:400;color:var(--amber);text-shadow:3px 3px 0 var(--amber-d)}
+.step{width:56px;height:52px;font-family:var(--px);font-size:22px}
+.hangar{--bg-c:#100e22;padding:10px;display:flex;flex-direction:column;gap:6px}
+.rail{display:flex;align-items:center;gap:8px;min-height:32px;padding:3px 4px;box-shadow:inset 0 -3px 0 0 var(--edge)}
+.rail .rl{flex:none;width:26px;font-family:var(--px);font-size:8px;color:var(--dim)}
+.rail .crates{display:flex;gap:2px;flex-wrap:nowrap}
+.rail.part .crates{opacity:.55}
+.rail.over{background:rgba(255,61,46,.14);box-shadow:inset 0 -3px 0 0 var(--alert)}
+.rail.over .rl{color:var(--alert)}
+.hangar.win .rail{box-shadow:inset 0 -3px 0 0 var(--ok)}
+.fam{display:flex;flex-direction:column;gap:6px}
 
 /* ---- Fuja do Alien ---- */
 .danger-title{color:var(--alert);text-shadow:3px 3px 0 #000;text-transform:uppercase}
@@ -173,8 +191,8 @@ h2{margin:0;font-family:var(--px);font-size:14px;line-height:1.7;font-weight:400
 .readout .d{font-family:var(--px);font-size:20px;color:var(--amber);text-shadow:3px 3px 0 var(--amber-d)}
 .readout .d.near{color:var(--alert);text-shadow:3px 3px 0 var(--alert-d);animation:blink .4s steps(1) infinite}
 .readout .h{font-family:var(--px);font-size:12px;color:var(--dim)}
-.problem{display:flex;align-items:center;justify-content:center;gap:12px;font-family:var(--px);font-size:26px;line-height:1;padding-block:6px}
-.answer{min-width:76px;min-height:40px;padding-bottom:6px;box-shadow:inset 0 -4px 0 0 var(--amber);text-align:center;color:var(--amber)}
+.problem{display:flex;align-items:center;justify-content:center;gap:12px;font-family:var(--px);font-size:34px;line-height:1;padding-block:10px;text-shadow:3px 3px 0 #000}
+.answer{min-width:92px;min-height:46px;padding-bottom:6px;box-shadow:inset 0 -4px 0 0 var(--amber);text-align:center;color:var(--amber)}
 .shake{animation:shake .3s steps(4)}
 @keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
 .pad{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -215,22 +233,23 @@ h2{margin:0;font-family:var(--px);font-size:14px;line-height:1.7;font-weight:400
   </header>
   <div class="terminal px"><span id="term"></span><span class="cursor"></span></div>
   <div class="turno px">
-    <div class="turno-top"><span class="label">Turno de hoje</span><span class="turno-n" id="turnoN">0/4</span></div>
+    <div class="turno-top"><span class="label">Turno de hoje</span><span class="turno-n" id="turnoN">0/3</span></div>
     <div class="week" id="week"></div>
     <p class="streak" id="streak"></p>
   </div>
   <nav class="missions">
     <button class="mission pbtn" data-go="partilha"><span class="ico"><span data-spr="bat" data-s="4"></span><em>M1</em></span><span class="t"><strong>Dividir baterias</strong><small>Partes iguais para cada sala</small></span><span class="check" data-check="partilha"></span></button>
     <button class="mission pbtn" data-go="grupos"><span class="ico"><span data-spr="radar" data-s="4"></span><em>M2</em></span><span class="t"><strong>Equipes de busca</strong><small>Quantos grupos cabem?</small></span><span class="check" data-check="grupos"></span></button>
-    <button class="mission pbtn" data-go="resto"><span class="ico"><span data-spr="pod" data-s="4"></span><em>M3</em></span><span class="t"><strong>Cápsulas de fuga</strong><small>Quando sobra alguém: o resto</small></span><span class="check" data-check="resto"></span></button>
+    <button class="mission pbtn" data-go="hangar"><span class="ico"><span data-spr="crate" data-s="4"></span><em>M3</em></span><span class="t"><strong>Carga do hangar</strong><small>Resolva a conta e confira</small></span><span class="check" data-check="hangar"></span></button>
   </nav>
-  <button class="alien-btn pbtn" data-go="desafio"><span data-spr="siren" data-s="5"></span><span class="t"><span class="a-eyebrow">!! Desafio !!</span><span class="a-title">Fuja do Alien</span><span class="a-sub">Tabuada da divisão contra o relógio</span></span><span class="check" data-check="desafio"></span></button>
+  <button class="alien-btn pbtn" data-go="desafio"><span data-spr="siren" data-s="5"></span><span class="t"><span class="a-eyebrow">!! Desafio extra !!</span><span class="a-title">Fuja do Alien</span><span class="a-sub">Opcional: tabuada da divisão contra o relógio</span></span><span class="check" data-check="desafio"></span></button>
 </section>
 
 <!-- M1 PARTILHA -->
 <section class="screen" id="partilha" hidden>
   <div class="bar"><button class="back pbtn" data-back>&lt; Ponte</button><span class="prog" id="p-prog"></span></div>
-  <p class="brief" id="p-brief"></p>
+  <div class="conta px" id="p-conta"></div>
+  <p class="story" id="p-brief"></p>
   <div class="depot px"><span class="label" id="p-dlabel"></span><div class="bats" id="p-depot"></div></div>
   <div class="rooms" id="p-rooms"></div>
   <p class="msg" id="p-msg"></p>
@@ -240,21 +259,28 @@ h2{margin:0;font-family:var(--px);font-size:14px;line-height:1.7;font-weight:400
 <!-- M2 GRUPOS -->
 <section class="screen" id="grupos" hidden>
   <div class="bar"><button class="back pbtn" data-back>&lt; Ponte</button><span class="prog" id="g-prog"></span></div>
-  <p class="brief" id="g-brief"></p>
+  <div class="conta px" id="g-conta"></div>
+  <p class="story" id="g-brief"></p>
   <div class="scope px" id="g-scope"></div>
   <p class="msg" id="g-msg"></p>
   <div class="row" id="g-tools"><button class="ghost pbtn" id="g-undo">Desfazer equipe</button></div>
   <div id="g-ask"></div>
 </section>
 
-<!-- M3 RESTO -->
-<section class="screen" id="resto" hidden>
-  <div class="bar"><button class="back pbtn" data-back>&lt; Ponte</button><span class="prog" id="r-prog"></span></div>
-  <p class="brief" id="r-brief"></p>
-  <div class="corridor px"><span class="label" id="r-clabel"></span><div class="crews" id="r-crew"></div></div>
-  <div class="pods" id="r-pods"></div>
-  <p class="msg" id="r-msg"></p>
-  <div id="r-ask"></div>
+<!-- M3 HANGAR -->
+<section class="screen" id="hangar" hidden>
+  <div class="bar"><button class="back pbtn" data-back>&lt; Ponte</button><span class="prog" id="h-prog"></span></div>
+  <div class="conta px" id="h-conta"></div>
+  <p class="story" id="h-brief"></p>
+  <div class="stepper px">
+    <button class="step pbtn" id="h-minus" aria-label="Diminuir resposta">-</button>
+    <div class="sv"><span class="label">Sua resposta</span><strong id="h-w">1</strong></div>
+    <button class="step pbtn" id="h-plus" aria-label="Aumentar resposta">+</button>
+  </div>
+  <button class="primary pbtn" id="h-load">Carregar e conferir</button>
+  <div class="hangar px" id="h-grid"></div>
+  <p class="msg" id="h-msg"></p>
+  <div id="h-ask"></div>
 </section>
 
 <!-- FUJA DO ALIEN -->
@@ -325,6 +351,8 @@ const SPR={
     "...###...","..#####..",".##vvv##.",".#vvvvv#.",".##vvv##.",".#######.","##.###.##","..f.f.f..",".r.f.f.r."]},
   siren:{pal:{'#':'#ffd000','k':'#0c0b1d'},rows:[
     "....#....","...###...","...#k#...","..##k##..","..##k##..",".###k###.",".#######.","####k####","#########"]},
+  crate:{pal:{'#':'#a8600a','o':'#ffb300','.':'#6b3d07'},rows:[
+    "########","#o....o#","#.o..o.#","#..oo..#","#..oo..#","#.o..o.#","#o....o#","########"]},
   check:{pal:{'#':'#39e35f'},rows:[
     "......#",".....##","#...##.","##.##..",".###...","..#...."]},
 };
@@ -334,20 +362,21 @@ function sprite(name,s=3){
   return `<svg class="spr" viewBox="0 0 ${w} ${h}" width="${w*s}" height="${h*s}" shape-rendering="crispEdges" aria-hidden="true">${r}</svg>`;
 }
 document.querySelectorAll('[data-spr]').forEach(el=>el.innerHTML=sprite(el.dataset.spr,+el.dataset.s||3));
-const BAT=sprite('bat',3),CREW=sprite('crew',3),CHECK=sprite('check',2);
+const BAT=sprite('bat',3),CRATE=sprite('crate',3),CHECK=sprite('check',2);
 
 /* ---------- memória local ---------- */
 const STORE='nostro9-stats-v1';
-const fresh=()=>({partilha:{a:0,c:0},grupos:{a:0,c:0},resto:{a:0,c:0},desafio:{a:0,c:0},erros:{},days:{}});
+const fresh=()=>({partilha:{a:0,c:0},grupos:{a:0,c:0},hangar:{a:0,c:0},desafio:{a:0,c:0},erros:{},days:{}});
 let stats=(()=>{try{return Object.assign(fresh(),JSON.parse(localStorage.getItem(STORE))||{})}catch(e){return fresh()}})();
 function save(){try{localStorage.setItem(STORE,JSON.stringify(stats))}catch(e){}}
 function record(mode,ok,fact){stats[mode].a++;if(ok)stats[mode].c++;else if(fact)stats.erros[fact]=(stats.erros[fact]||0)+1;save()}
 
 /* ---------- turno diário ---------- */
-const MODES=['partilha','grupos','resto','desafio'];
+const MODES=['partilha','grupos','hangar']; /* o desafio é extra e não conta para o turno */
 const dkey=(d=new Date())=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 const doneToday=()=>stats.days[dkey()]||[];
-const isFull=k=>(stats.days[k]||[]).length>=MODES.length;
+const countReq=l=>MODES.filter(m=>l.includes(m)).length;
+const isFull=k=>countReq(stats.days[k]||[])>=MODES.length;
 function markDone(m){
   const k=dkey(),l=stats.days[k]||[];
   if(l.includes(m))return false;
@@ -362,13 +391,13 @@ function streak(){
   return n;
 }
 function turnoLine(){
-  const n=doneToday().length;
+  const n=countReq(doneToday());
   if(n>=MODES.length){const s=streak();return `<b>Turno completo!</b> Sequência de ${s} ${s===1?'dia':'dias'} seguidos.`}
-  return `Turno de hoje: <b>${n} de ${MODES.length}</b> tarefas feitas.`;
+  return `Turno de hoje: <b>${n} de ${MODES.length}</b> missões feitas.`;
 }
 const WD=['D','S','T','Q','Q','S','S'];
 function renderMenu(){
-  const done=doneToday(),n=done.length,all=n>=MODES.length;
+  const done=doneToday(),n=countReq(done),all=n>=MODES.length,alienDone=done.includes('desafio');
   document.querySelectorAll('[data-check]').forEach(el=>{
     const m=el.dataset.check,ok=done.includes(m);
     el.innerHTML=ok?CHECK+(m==='desafio'?'Escapou':'Feita'):(m==='desafio'?'':'A fazer');
@@ -377,7 +406,7 @@ function renderMenu(){
   const tn=$('#turnoN');tn.textContent=`${n}/${MODES.length}`;tn.classList.toggle('all',all);
   let w='';
   for(let i=6;i>=0;i--){
-    const d=new Date();d.setDate(d.getDate()-i);const c=(stats.days[dkey(d)]||[]).length;
+    const d=new Date();d.setDate(d.getDate()-i);const c=countReq(stats.days[dkey(d)]||[]);
     w+=`<span class="day${c>=MODES.length?' full':c?' part':''}${i===0?' today':''}"><i></i>${WD[d.getDay()]}</span>`;
   }
   $('#week').innerHTML=w;
@@ -385,12 +414,13 @@ function renderMenu(){
   $('#streak').innerHTML=s
     ? (all?`<b>${s} ${s===1?'dia':'dias'}</b> seguidos com o turno completo. Volte amanhã!`
           :`Sequência de <b>${s} ${s===1?'dia':'dias'}</b>. Complete o turno hoje para chegar a ${s+1}!`)
-    : 'Complete as 4 tarefas hoje para começar uma sequência.';
+    : 'Complete as 3 missões hoje para começar uma sequência.';
   const left=MODES.length-n;
   $('#term').innerHTML=
-    n===0?'&gt; ALERTA: forma de vida desconhecida a bordo.<br>&gt; Técnico, 4 tarefas esperam por você hoje.'
-    :all?'&gt; TURNO COMPLETO. A estação está segura.<br>&gt; Pode treinar mais se quiser. Até amanhã!'
-    :`&gt; Bom trabalho, técnico.<br>&gt; ${left===1?'Falta 1 tarefa':`Faltam ${left} tarefas`} para fechar o turno.`;
+    n===0?'&gt; ALERTA: forma de vida desconhecida a bordo.<br>&gt; Técnico, 3 missões esperam por você hoje.'
+    :all?(alienDone?'&gt; TURNO COMPLETO. Você até fugiu do Alien!<br>&gt; A estação está segura. Até amanhã!'
+                   :'&gt; TURNO COMPLETO. A estação está segura.<br>&gt; Coragem para o desafio extra? Fuja do Alien!')
+    :`&gt; Bom trabalho, técnico.<br>&gt; ${left===1?'Falta 1 missão':`Faltam ${left} missões`} para fechar o turno.`;
 }
 
 /* ---------- som 8-bit ---------- */
@@ -444,6 +474,11 @@ function explain(box,html,label,fn){
   if(label){const b=document.createElement('button');b.className='primary pbtn';b.textContent=label;b.onclick=()=>{click();fn()};d.appendChild(b)}
   box.appendChild(d);d.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
+function conta(sel,a,la,b,lb,lc,c='?',state=''){
+  const el=$(sel);el.className='conta px'+(state?' '+state:'');
+  el.innerHTML=`<span class="cn"><strong>${a}</strong><small>${la}</small></span><span class="op">÷</span><span class="cn"><strong>${b}</strong><small>${lb}</small></span><span class="op">=</span><span class="cn ans"><strong>${c}</strong><small>${lc}</small></span>`;
+  if(state==='win'||state==='bad'){void el.offsetWidth;el.classList.add('pop')}
+}
 function setMsg(sel,t,cls=''){const m=$(sel);m.textContent=t;m.className='msg '+cls}
 
 /* ---------- fim de missão ---------- */
@@ -457,7 +492,7 @@ $('#f-again').onclick=()=>{click();againFn&&againFn()};
 function missionEnd(mode,firsts,total,again,what){
   const all=firsts===total,nw=markDone(mode);
   finish(`${firsts}/${total}`,all?'Missão cumprida sem erros!':'Missão cumprida!',
-    `${what} ${firsts} de ${total} tarefas foram resolvidas de primeira.${all?'':' Jogue de novo para treinar mais.'}<br><br>${nw?'Tarefa marcada como feita hoje. ':''}${turnoLine()}`,again);
+    `${what} ${firsts} de ${total} tarefas foram resolvidas de primeira.${all?'':' Jogue de novo para treinar mais.'}<br><br>${nw?'Missão marcada como feita hoje. ':''}${turnoLine()}`,again);
 }
 
 /* ================= M1 PARTILHA ================= */
@@ -467,7 +502,8 @@ function pNew(){
   const k=rnd(2,4),q=rnd(2,6);
   Object.assign(P,{k,q,n:k*q,depot:k*q,rooms:Array(k).fill(0),done:false});
   $('#p-prog').textContent=`Tarefa ${P.i+1}/${P.total}`;
-  $('#p-brief').innerHTML=`Temos <b>${P.n} baterias</b> para <b>${k} salas seguras</b>. Toque numa sala para levar uma bateria até ela. No fim, todas as salas precisam ter a mesma quantidade.`;
+  conta('#p-conta',P.n,'baterias',k,'salas','cada sala');
+  $('#p-brief').innerHTML=`Divida as baterias entre as salas seguras. Toque numa sala para levar uma bateria até ela. Todas precisam ficar iguais.`;
   $('#p-ask').innerHTML='';setMsg('#p-msg','');pRender();
 }
 const bats=n=>BAT.repeat(n);
@@ -487,10 +523,11 @@ function pCheck(){
   if(P.depot>0)return;
   if(!P.rooms.every(r=>r===P.rooms[0])){setMsg('#p-msg','As salas estão com quantidades diferentes. Use "Tirar 1" e leve a bateria para outra sala.','err');bad();return}
   P.done=true;setMsg('#p-msg','Todas as salas estão iguais!','good');good();
-  ask($('#p-ask'),'Quantas baterias cada sala recebeu?',choices(P.q),P.q,(first,box)=>{
+  ask($('#p-ask'),`Quanto é <span class="qn">${P.n} ÷ ${P.k}</span>?`,choices(P.q),P.q,(first,box)=>{
     record('partilha',first,`${P.n}÷${P.k}`);if(first)P.firsts++;
+    conta('#p-conta',P.n,'baterias',P.k,'salas','cada sala',P.q,'win');
     const last=++P.i>=P.total;
-    explain(box,`<div class="eq">${P.n}÷${P.k}=${P.q}</div><p class="explain">Dividir ${P.n} baterias em ${P.k} partes iguais dá ${P.q} para cada sala.</p>`,
+    explain(box,`<div class="eq">${P.n}÷${P.k}=${P.q}</div><p class="explain">${P.n} dividido em ${P.k} partes iguais dá ${P.q} para cada uma.</p>`,
       last?'Ver relatório':'Próxima tarefa',last?()=>missionEnd('partilha',P.firsts,P.total,pStart,'Todas as salas receberam energia.'):pNew);
   });
 }
@@ -505,7 +542,8 @@ function gNew(){
   Object.assign(G,{g,t,n,sel:[],groups:[],team:Array(n).fill(-1),done:false,
     pos:cells.map(c=>({x:((c%6)+.5)/6*100+rnd(-3,3),y:(Math.floor(c/6)+.5)/5*100+rnd(-3,3)}))});
   $('#g-prog').textContent=`Tarefa ${G.i+1}/${G.total}`;
-  $('#g-brief').innerHTML=`O detector mostra <b>${n} sinais</b>. Cada equipe de busca consegue cobrir <b>${g} sinais</b>. Toque em ${g} sinais para formar uma equipe.`;
+  conta('#g-conta',n,'sinais',g,'por equipe','equipes');
+  $('#g-brief').innerHTML=`Cada equipe de busca cobre ${g} sinais do detector. Toque em ${g} sinais para formar uma equipe.`;
   $('#g-ask').innerHTML='';$('#g-tools').hidden=false;gRender();
 }
 function gRender(){
@@ -528,54 +566,63 @@ $('#g-scope').addEventListener('click',e=>{
 $('#g-undo').onclick=()=>{const last=G.groups.pop();if(last){last.forEach(x=>G.team[x]=-1);click();gRender()}};
 function gDone(){
   G.done=true;$('#g-tools').hidden=true;setMsg('#g-msg','Todos os sinais estão cobertos!','good');good();
-  ask($('#g-ask'),'Quantas equipes foram necessárias?',choices(G.t),G.t,(first,box)=>{
+  ask($('#g-ask'),`Quanto é <span class="qn">${G.n} ÷ ${G.g}</span>?`,choices(G.t),G.t,(first,box)=>{
     record('grupos',first,`${G.n}÷${G.g}`);if(first)G.firsts++;
+    conta('#g-conta',G.n,'sinais',G.g,'por equipe','equipes',G.t,'win');
     const last=++G.i>=G.total;
-    explain(box,`<div class="eq">${G.n}÷${G.g}=${G.t}</div><p class="explain">Dentro de ${G.n} cabem ${G.t} grupos de ${G.g}. Dividir também serve para descobrir <b>quantos grupos</b> dá para formar.</p>`,
+    explain(box,`<div class="eq">${G.n}÷${G.g}=${G.t}</div><p class="explain">Dentro de ${G.n} cabem ${G.t} grupos de ${G.g}. Dividir também mostra <b>quantos grupos</b> dá para formar.</p>`,
       last?'Ver relatório':'Próxima tarefa',last?()=>missionEnd('grupos',G.firsts,G.total,gStart,'A estação inteira foi vasculhada.'):gNew);
   });
 }
 
-/* ================= M3 RESTO ================= */
-const R={total:4};
-function rStart(){R.i=0;R.firsts=0;rNew();show('resto')}
-function rNew(){
-  const c=rnd(3,5),q=rnd(2,4),r=rnd(1,c-1);
-  Object.assign(R,{c,q,r,n:c*q+r,left:c*q+r,pods:[0],done:false});
-  $('#r-prog').textContent=`Tarefa ${R.i+1}/${R.total}`;
-  $('#r-brief').innerHTML=`<b>${R.n} tripulantes</b> precisam sair da estação. Cada cápsula de fuga leva <b>${c} pessoas</b> e só pode ser lançada cheia. Toque nos tripulantes para embarcá-los.`;
-  $('#r-ask').innerHTML='';setMsg('#r-msg','');rRender();
+/* ================= M3 HANGAR ================= */
+const H={total:4};
+function hStart(){H.i=0;H.firsts=0;hNew();show('hangar')}
+function hNew(){
+  const k=rnd(2,5),q=rnd(3,7),n=k*q;
+  Object.assign(H,{k,q,n,w:1,loaded:0,firstTry:true,done:false});
+  $('#h-prog').textContent=`Tarefa ${H.i+1}/${H.total}`;
+  $('#h-brief').innerHTML=`Escolha a resposta com <b>-</b> e <b>+</b>, depois toque em Carregar para conferir nos trilhos do hangar.`;
+  $('#h-ask').innerHTML='';$('#h-load').hidden=false;setMsg('#h-msg','');
+  $('#h-grid').classList.remove('win');hShow();hRender();
 }
-function rRender(){
-  $('#r-clabel').textContent=R.left?`Corredor: ${R.left} tripulantes`:'Corredor vazio';
-  $('#r-crew').innerHTML=Array.from({length:R.left},()=>`<button class="crew-btn" aria-label="tripulante" ${R.done?'disabled':''}>${CREW}</button>`).join('');
-  $('#r-pods').innerHTML=R.pods.map((p,i)=>`<div class="pod px${p===R.c?' full':''}"><div class="seats">${Array.from({length:R.c},(_,s)=>`<span class="seat">${s<p?sprite('crew',2):''}</span>`).join('')}</div><span class="tag">${p===R.c?'Pronta':'Cápsula '+(i+1)}</span></div>`).join('');
-}
-$('#r-crew').addEventListener('click',e=>{
-  if(R.done||!e.target.closest('.crew-btn'))return;
-  const k=R.pods.length-1;if(R.pods[k]>=R.c)return;
-  R.pods[k]++;R.left--;click();
-  if(R.pods[k]===R.c){
-    tone(880,.06);tone(1175,.08,'square',.03,.06);
-    if(R.left>=R.c)R.pods.push(0);
-    else{R.done=true;rRender();rAsk();return}
+function hShow(state){conta('#h-conta',H.n,'caixas',H.k,'trilhos','por fileira',state?H.w:(H.w||'?'),state||'')}
+function hRender(){
+  $('#h-w').textContent=H.w;
+  $('#h-minus').disabled=H.done||H.w<=1;$('#h-plus').disabled=H.done||H.w>=10;$('#h-load').disabled=H.done;
+  let html='';
+  if(!H.loaded){
+    for(let r=0;r<H.k;r++)html+=`<div class="rail"><span class="rl">T${r+1}</span><span class="crates"></span></div>`;
+    $('#h-grid').innerHTML=`<span class="label">${H.n} caixas esperando</span>`+html;return;
   }
-  rRender();
-});
-function rAsk(){
-  setMsg('#r-msg',`Sobraram ${R.left} no corredor, e ${R.left===1?'ele não enche':'eles não enchem'} outra cápsula.`,'err');bad();
-  const {q,r,c,n}=R,fmt=(a,b)=>`${a} cheias, sobram ${b}`;
-  const right=fmt(q,r),opts=shuffle([right,fmt(q+1,0),fmt(q-1,r+c)]);
-  let firstAll=true;
-  ask($('#r-ask'),'Quantas cápsulas ficaram cheias e quantos tripulantes sobraram?',opts,right,(first,box)=>{
-    firstAll=first;
-    explain(box,`<div class="eq">${n}÷${c}=${q} <small>resto ${r}</small></div><p class="explain">O <b>resto</b> é o que sobra quando não dá para formar mais um grupo completo.</p>`);
-    ask($('#r-ask'),'Para ninguém ficar para trás, quantas cápsulas a estação precisa ter?',[q,q+1,q+2],q+1,(f2,box2)=>{
-      const ok=firstAll&&f2;record('resto',ok,`${n}÷${c}`);if(ok)R.firsts++;
-      const last=++R.i>=R.total;
-      explain(box2,`<p class="explain">Os ${r} que sobraram também precisam de uma cápsula, mesmo que ela saia sem estar cheia. Então são ${q} + 1 = <b>${q+1} cápsulas</b>. Às vezes o resto pede mais um grupo!</p>`,
-        last?'Ver relatório':'Próxima tarefa',last?()=>missionEnd('resto',R.firsts,R.total,rStart,'Toda a tripulação escapou.'):rNew);
-    });
+  const w=H.loaded,rows=Math.ceil(H.n/w);
+  for(let r=0;r<Math.max(rows,H.k);r++){
+    const cnt=Math.max(0,Math.min(w,H.n-r*w)),rail=r<H.k;
+    html+=`<div class="rail${rail?'':' over'}${cnt&&cnt<w?' part':''}"><span class="rl">${rail?'T'+(r+1):'!!'}</span><span class="crates">${CRATE.repeat(cnt)}</span></div>`;
+  }
+  $('#h-grid').innerHTML=html;
+}
+function hStep(d){if(H.done)return;H.w=Math.min(10,Math.max(1,H.w+d));click();hShow();$('#h-w').textContent=H.w;$('#h-minus').disabled=H.w<=1;$('#h-plus').disabled=H.w>=10}
+$('#h-minus').onclick=()=>hStep(-1);
+$('#h-plus').onclick=()=>hStep(1);
+$('#h-load').onclick=()=>{
+  if(H.done)return;
+  H.loaded=H.w;const rows=Math.ceil(H.n/H.w);hRender();
+  if(H.w===H.q){hWin();return}
+  H.firstTry=false;bad();hShow('bad');
+  if(rows>H.k)setMsg('#h-msg',`${H.n} ÷ ${H.k} não é ${H.w}: sobraram fileiras sem trilho. A resposta é maior.`,'err');
+  else if(rows<H.k)setMsg('#h-msg',`${H.n} ÷ ${H.k} não é ${H.w}: ficou trilho vazio. A resposta é menor.`,'err');
+  else setMsg('#h-msg',`${H.n} ÷ ${H.k} não é ${H.w}: as fileiras ficaram diferentes. Tente outro número.`,'err');
+};
+function hWin(){
+  H.done=true;$('#h-grid').classList.add('win');$('#h-load').hidden=true;hRender();hShow('win');
+  setMsg('#h-msg',`Isso! ${H.n} ÷ ${H.k} = ${H.q}. Cada trilho ficou com ${H.q} caixas.`,'good');good();
+  const {k,q,n}=H;
+  ask($('#h-ask'),`Agora conte as fileiras no hangar. Quanto é <span class="qn">${n} ÷ ${q}</span>?`,choices(k),k,(first,box)=>{
+    const ok=H.firstTry&&first;record('hangar',ok,`${n}÷${k}`);if(ok)H.firsts++;
+    const last=++H.i>=H.total;
+    explain(box,`<div class="fam eq"><span>${n}÷${k}=${q}</span><span>${n}÷${q}=${k}</span></div><p class="explain">O mesmo hangar mostra duas divisões: ${n} caixas em ${k} trilhos dão ${q} por fileira, e ${n} caixas em fileiras de ${q} dão ${k} fileiras.</p>`,
+      last?'Ver relatório':'Próxima tarefa',last?()=>missionEnd('hangar',H.firsts,H.total,hStart,'O hangar está organizado.'):hNew);
   });
 }
 
@@ -613,7 +660,7 @@ function dNewQ(){
   $('#d-q').textContent=`${D.n}÷${b}=`;$('#d-ans').textContent='';setMsg('#d-msg','');
   $('#d-hint').hidden=false;$('#d-hits').textContent=`${D.hits}/${D.goal}`;
 }
-function showHint(){$('#d-hint').hidden=true;setMsg('#d-msg',`Pense na tabuada: ${D.b} × ? = ${D.n}`)}
+function showHint(){$('#d-hint').hidden=true;setMsg('#d-msg',`Dica: quantos grupos de ${D.b} cabem em ${D.n}?`)}
 $('#d-hint').onclick=()=>{click();showHint()};
 const KEYS=['1','2','3','4','5','6','7','8','9','del','0','ok'];
 $('#d-pad').innerHTML=KEYS.map(k=>`<button class="key pbtn${k==='ok'?' ok':''}${k==='del'?' del':''}" data-k="${k}">${k==='del'?'Apagar':k==='ok'?'OK':k}</button>`).join('');
@@ -632,7 +679,7 @@ function dCheck(){
     good();D.hits++;D.dist=Math.min(100,D.dist+22);
     if(D.hits>=D.goal){
       stopDesafio();const nw=markDone('desafio');
-      finish('10/10','Você fugiu do Alien!',`Você acertou 10 contas e o Alien voltou para os dutos. Nível ${D.level===1?'2 a 5':'2 a 9'} concluído.<br><br>${nw?'Desafio marcado como feito hoje. ':''}${turnoLine()}`,()=>{show('desafio');dPlay(D.level)});
+      finish('10/10','Você fugiu do Alien!',`Você acertou 10 contas e o Alien voltou para os dutos. Nível ${D.level===1?'2 a 5':'2 a 9'} concluído.<br><br>${nw?'Desafio extra marcado como feito hoje. ':''}${turnoLine()}`,()=>{show('desafio');dPlay(D.level)});
       return;
     }
     dNewQ();
@@ -669,7 +716,7 @@ logo.addEventListener('pointerdown',e=>{e.preventDefault();holdStart=performance
 ['pointerup','pointerleave','pointercancel'].forEach(ev=>logo.addEventListener(ev,holdEnd));
 logo.addEventListener('contextmenu',e=>e.preventDefault());
 
-const LABELS={partilha:'M1 · Dividir em partes iguais',grupos:'M2 · Formar grupos',resto:'M3 · Divisão com resto',desafio:'Fuja do Alien · Tabuada da divisão'};
+const LABELS={partilha:'M1 · Dividir em partes iguais',grupos:'M2 · Formar grupos',hangar:'M3 · Resolver a conta escrita',desafio:'Fuja do Alien · Tabuada da divisão'};
 function openPais(){
   $('#k-stats').innerHTML=Object.keys(LABELS).map(k=>{const s=stats[k],pct=s.a?Math.round(s.c/s.a*100):0;
     return `<div class="stat"><div class="top"><span>${LABELS[k]}</span><span class="v">${s.a?`${s.c} de ${s.a} · ${pct}%`:'não jogou'}</span></div><div class="meter"><i style="width:${pct}%"></i></div></div>`}).join('');
@@ -687,7 +734,7 @@ $('#k-reset').onclick=()=>{$('#k-confirm').hidden=false;$('#k-reset').hidden=tru
 $('#k-no').onclick=()=>{$('#k-confirm').hidden=true;$('#k-reset').hidden=false};
 $('#k-yes').onclick=()=>{stats=fresh();save();openPais()};
 
-const START={partilha:pStart,grupos:gStart,resto:rStart,desafio:dStart};
+const START={partilha:pStart,grupos:gStart,hangar:hStart,desafio:dStart};
 renderMenu();
 </script>
 </body>
