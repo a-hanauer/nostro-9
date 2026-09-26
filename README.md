@@ -2,13 +2,13 @@
 
 Um jogo de navegador, em estilo 8-bits, para crianças aprenderem e praticarem **divisão**. Foi feito para celular e roda direto no navegador, sem instalação.
 
-O jogador é o técnico de uma estação espacial invadida por um alien. Para manter todos a salvo, ele precisa dividir baterias, organizar equipes de busca, embarcar a tripulação nas cápsulas de fuga e, no desafio final, fugir do Alien respondendo contas de divisão.
+O jogador é o técnico de uma estação espacial invadida por um alien. Para manter todos a salvo, ele precisa dividir baterias, organizar equipes de busca, arrumar a carga do hangar e, no desafio extra, fugir do Alien respondendo contas de divisão.
 
 ## Como jogar
 
 Abra o `index.html` no navegador do celular ou do computador. Se estiver publicado no GitHub Pages, basta acessar o link do repositório.
 
-Todo dia há um **turno** com 4 tarefas. Cada tarefa concluída fica marcada como feita, e completar as 4 no mesmo dia aumenta a **sequência de dias seguidos**. As tarefas podem ser repetidas quantas vezes o jogador quiser.
+Todo dia há um **turno** com 3 missões. Cada missão concluída fica marcada como feita, e completar as 3 no mesmo dia fecha o turno e aumenta a **sequência de dias seguidos**. O **Fuja do Alien** é um desafio extra e opcional: fica marcado quando o jogador escapa, mas não é preciso para fechar o turno. Tudo pode ser repetido quantas vezes o jogador quiser.
 
 ## As missões
 
@@ -16,10 +16,10 @@ Todo dia há um **turno** com 4 tarefas. Cada tarefa concluída fica marcada com
 |---|---|---|
 | **M1 · Dividir baterias** | Divisão como partilha | Distribuir baterias entre as salas até todas terem a mesma quantidade. Depois, responder quantas cada sala recebeu. |
 | **M2 · Equipes de busca** | Divisão como medida (agrupamento) | Tocar nos sinais do detector para formar grupos do tamanho pedido. Depois, responder quantas equipes foram necessárias. |
-| **M3 · Cápsulas de fuga** | Divisão com resto | Embarcar os tripulantes em cápsulas que só saem cheias. Descobrir quantas encheram, quantos sobraram e quantas cápsulas são precisas para ninguém ficar para trás. |
-| **Fuja do Alien** | Tabuada da divisão | O Alien se aproxima no detector de movimento. Cada resposta certa faz ele recuar. É preciso acertar 10 contas antes que ele chegue. Há dois níveis: do 2 ao 5 e do 2 ao 9. |
+| **M3 · Carga do hangar** | Resolver a conta escrita | A conta aparece primeiro (`18 ÷ 3 = ?`). O jogador escolhe a resposta e carrega o hangar para conferir: as caixas são arrumadas nos trilhos e mostram se a resposta está certa, alta ou baixa. Depois, responde a divisão parceira (`18 ÷ 6 = 3`) contando as fileiras. |
+| **Fuja do Alien** (extra) | Tabuada da divisão | O Alien se aproxima no detector de movimento. Cada resposta certa faz ele recuar, e depois de um erro aparece uma dica ("quantos grupos de 6 cabem em 24?"). É preciso acertar 10 contas antes que ele chegue. Há dois níveis: do 2 ao 5 e do 2 ao 9. |
 
-As missões vão do concreto ao abstrato. Primeiro a criança **vê** a divisão acontecer com objetos, e só no final aparece a conta escrita (por exemplo, `12 ÷ 3 = 4`).
+Em todas as missões a **conta fica em destaque** no topo da tela (por exemplo, `12 ÷ 3 = ?`), e a história é só o cenário. As missões vão do concreto ao abstrato: na M1 e na M2 a criança resolve a divisão com objetos na tela, e na M3 resolve a conta primeiro e usa o hangar para conferir.
 
 ## Área dos pais
 
